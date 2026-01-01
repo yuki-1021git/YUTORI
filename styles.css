@@ -546,6 +546,7 @@ body.is-intro {
   gap: 12px;
   font-size: 0.95rem;
   font-weight: 600;
+  justify-content: center;
 }
 
 .section-cta {
