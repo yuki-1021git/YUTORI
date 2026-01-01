@@ -91,20 +91,10 @@
   background: #f7eee7;
 }
 
-.access-body {
+.access-layout {
   display: flex;
   gap: 32px;
-  align-items: flex-start;
-}
-.access-map-wrap {
-  flex: 1 1 55%;
-  max-width: 640px;
-}
-.access-text {
-  flex: 1 1 45%;
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
+  align-items: center;
 }
 
 .access-ul-container {
@@ -112,6 +102,8 @@
 }
 
 .access-map-wrap {
+  flex: 1 1 50%;
+  max-width: 640px;
   margin: 0;
   border-radius: 12px;
   overflow: hidden;
@@ -123,6 +115,13 @@
   border: none;
   display: block;
 }
+.access-text {
+  flex: 1 1 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  justify-content: center;
+}
 .access-info {
   text-align: left;
   color: #7a5c3e;
@@ -130,20 +129,16 @@
   letter-spacing: 0.02em;
 }
 @media (max-width: 768px) {
-  .access-body {
+  .access-layout {
     flex-direction: column;
+    align-items: stretch;
   }
   .access-map-wrap {
-    width: 100%;
     max-width: 100%;
-    margin: 0 0 20px 0;
-  }
-  .access-text {
-    width: 100%;
+    margin-bottom: 20px;
   }
   .access-info {
     font-size: 0.98rem;
-    text-align: center;
   }
 }
 /* ========== section-title フェードイン ========== */
