@@ -59,12 +59,24 @@
 .service-recommend {
   font-size: 0.9rem;
   color: #666;
-  margin-left: 1em;
-  margin-bottom: 16px;
+  margin: 0 auto 16px;
+  padding: 0;
+  list-style: none;
+  display: inline-block;
+  text-align: left;
 }
 .service-recommend li {
-  list-style: disc;
-  margin-bottom: 4px;
+  position: relative;
+  padding-left: 1em;
+  margin-bottom: 6px;
+}
+.service-recommend li::before {
+  content: "・";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #c58f6b;
+  line-height: 1.6;
 }
 .service-meta {
   display: flex;
@@ -72,6 +84,7 @@
   gap: 12px;
   font-size: 0.95rem;
   font-weight: 600;
+  justify-content: center;
 }
 /* ========== アクセスセクション ========== */
 .section-access {
@@ -447,6 +460,152 @@ body.is-intro {
   line-height: 1;
   letter-spacing: 0.12em;
   font-size: clamp(48px, 12vw, 140px);
+}
+
+/* --- YUTORI improvements --- */
+.section-header {
+  margin-bottom: 32px;
+}
+.section-label {
+  display: block;
+  font-size: 0.85rem;
+  letter-spacing: 0.15em;
+  color: #d2b9a0;
+  margin-bottom: 8px;
+}
+.section-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+.section-lead {
+  font-size: 0.95rem;
+  color: #666;
+  line-height: 1.8;
+  margin-bottom: 32px;
+  max-width: 640px;
+}
+
+.service-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+}
+@media (max-width: 768px) {
+  .service-list {
+    grid-template-columns: 1fr;
+  }
+}
+.service-card {
+  background: #fdf6f1;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.03);
+  text-align: center;
+}
+.service-name {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+.service-tagline {
+  font-size: 0.95rem;
+  color: #c58f6b;
+  margin-bottom: 16px;
+}
+.service-desc {
+  font-size: 0.95rem;
+  color: #555;
+  margin-bottom: 16px;
+}
+.service-recommend {
+  font-size: 0.9rem;
+  color: #666;
+  margin: 0 auto 16px;
+  padding: 0;
+  list-style: none;
+  display: inline-block;
+  text-align: left;
+}
+.service-recommend li {
+  position: relative;
+  padding-left: 1em;
+  margin-bottom: 6px;
+}
+.service-recommend li::before {
+  content: "・";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #c58f6b;
+  line-height: 1.6;
+}
+.service-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.section-cta {
+  margin-top: 32px;
+  text-align: center;
+}
+.section-cta .btn-primary {
+  min-width: 240px;
+}
+
+.access-notes {
+  margin: 16px 0 0;
+  padding-left: 20px;
+  color: #666;
+  line-height: 1.8;
+  font-size: 0.95rem;
+}
+.access-notes li {
+  list-style: disc;
+  margin-bottom: 6px;
+}
+
+.section-final-cta {
+  background: #fdf6f1;
+}
+.footer-lead {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.9;
+  text-align: center;
+  margin: 0 auto 20px;
+  max-width: 720px;
+}
+
+@media (max-width: 768px) {
+  body {
+    font-size: 15px;
+    line-height: 1.8;
+  }
+  .section {
+    padding: 40px 0;
+  }
+  .section-header {
+    margin-bottom: 28px;
+  }
+  .section-lead {
+    margin-bottom: 28px;
+  }
+  .container {
+    max-width: 38em;
+  }
+  .footer-lead {
+    font-size: 0.98rem;
+    line-height: 1.9;
+    padding: 0 8px;
+  }
+  .section-cta .btn-primary,
+  .cta-row .btn-primary {
+    width: 100%;
+  }
 }
 
 @keyframes intro-curtain-up {

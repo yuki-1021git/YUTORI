@@ -20,9 +20,9 @@
 
       <nav class="header-nav" aria-label="ページ内ナビゲーション">
         <a href="#service" class="nav-link">MENU</a>
-        <a href="#" class="nav-link">お客様の声</a>
-        <a href="#" class="nav-link">アクセス</a>
-        <a href="#" class="nav-link nav-cta">LINE予約</a>
+        <a href="#voice" class="nav-link">お客様の声</a>
+        <a href="#access" class="nav-link">アクセス</a>
+        <a href="#" class="nav-link nav-cta">LINEで予約・相談する</a>
       </nav>
     </div>
   </header>
@@ -35,7 +35,7 @@
           <p class="section-lead hero-lead">鹿児島○○エリア／自宅と整骨院の一角で受けられる、子育てママ専用エステ</p>
 
           <div class="cta-row">
-            <a class="btn-primary" href="#" aria-label="LINEで予約">LINEで予約</a>
+            <a class="btn-primary" href="#" aria-label="LINEで予約・相談する">LINEで予約・相談する</a>
           </div>
         </div>
 
@@ -59,8 +59,11 @@
 
     <section class="section section-trouble" aria-label="お悩み">
       <div class="container container-trouble">
-        <h2 class="section-title trouble-title fadein-up">こんなお悩み、抱えていませんか？</h2>
-        <p class="section-lead">毎日がんばっているママほど「自分のことは後回し」になりがち。</p>
+        <div class="section-header">
+          <span class="section-label">TROUBLE</span>
+          <h2 class="section-title trouble-title">こんなお悩み、抱えていませんか？</h2>
+          <p class="section-lead">毎日がんばっているママほど「自分のことは後回し」になりがち。</p>
+        </div>
 
         <ul class="trouble-list">
           <li>出産前より、顔が疲れて見える気がする</li>
@@ -74,9 +77,10 @@
 
     <section class="section section-feature" aria-label="サロンのこだわり">
       <div class="container">
-        <div class="section-head">
-          <p class="eyebrow fadein-up">FEATURE</p>
-          <h2 class="section-title fadein-up">サロンのこだわり</h2>
+        <div class="section-header">
+          <span class="section-label">FEATURE</span>
+          <h2 class="section-title">サロンのこだわり</h2>
+          <p class="section-lead">ママが通いやすく、安心してリラックスできる環境づくりにこだわっています。</p>
         </div>
 
         <div class="feature-stack">
@@ -189,16 +193,18 @@
             </div>
           </article>
         </div>
+        <div class="cta-row section-cta">
+          <a class="btn-primary" href="#" aria-label="LINEで予約・相談する">LINEで予約・相談する</a>
+        </div>
       </div>
     </section>
     <!-- VOICEセクション（お客様の声）ここから -->
     <section id="voice" class="section section-voice">
       <div class="container">
-        <div class="voice-header">
-          <p class="eyebrow fadein-up">VOICE</p>
-          <h2 class="section-title fadein-up">お客様の声</h2>
-          <p class="voice-subcopy">忙しいママから嬉しい声をいただいております。</p>
-          
+        <div class="section-header voice-header">
+          <span class="section-label">VOICE</span>
+          <h2 class="section-title">お客様の声</h2>
+          <p class="section-lead">忙しいママから嬉しい声をいただいております。</p>
         </div>
         <div class="voice-content">
           <div class="voice-image">
@@ -239,20 +245,37 @@
             </p>
           </div>
         </div>
+        <div class="cta-row section-cta">
+          <a class="btn-primary" href="#" aria-label="LINEで予約・相談する">LINEで予約・相談する</a>
+        </div>
       </div>
     </section>
     <!-- VOICEセクション（お客様の声）ここまで -->
       <section id="access" class="section section-access" aria-label="アクセス">
         <div class="container">
-          <div class="section-head">
-            <p class="eyebrow fadein-up">ACCESS</p>
-            <h2 class="section-title fadein-up">アクセス</h2>
+          <div class="section-header">
+            <span class="section-label">ACCESS</span>
+            <h2 class="section-title">アクセス</h2>
+            <p class="section-lead">駐車スペースもご案内できます。お子さま連れでもお気軽にどうぞ。</p>
           </div>
           <div class="access-map-wrap">
             <iframe class="access-map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3282.9999999999995!2d130.5581234!3d31.5601234!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x353e6e8e8e8e8e8e%3A0x1234567890abcdef!2z44CSODk5LTAwMDEg6auY5bGx5biC5a6u5Yy65rC45YyX77yR5LiB55uu77yR77yR4oiS77yR77yR!5e0!3m2!1sja!2sjp!4v1700000000000!5m2!1sja!2sjp" width="100%" height="340" style="border:0; border-radius:12px; box-shadow:0 2px 16px rgba(178,138,90,0.10);" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Google Map"></iframe>
           </div>
           <div class="access-info">
             <p>鹿児島県鹿児島市○○町1-2-3<br>（詳細はご予約時にご案内します）</p>
+          </div>
+          <ul class="access-notes">
+            <li>お子さま連れ歓迎（ベビーカーOK）</li>
+            <li>駐車場1台分あり（○○方面からアクセスしやすい立地です）</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="section section-final-cta" aria-label="お問い合わせCTA">
+        <div class="container">
+          <p class="footer-lead">「ちょっと気になる」くらいでも大丈夫です。まずはLINEで、今のお悩みを一言だけ送ってみてください。</p>
+          <div class="cta-row section-cta">
+            <a class="btn-primary" href="#" aria-label="LINEで予約・相談する">LINEで予約・相談する</a>
           </div>
         </div>
       </section>
@@ -267,13 +290,13 @@
       <nav class="footer-nav" aria-label="フッターナビ">
         <a href="#service">サービス</a>
         <a href="#voice">お客様の声</a>
-        <a href="#">アクセス</a>
-        <a href="#" class="footer-cta">LINE予約</a>
+        <a href="#access">アクセス</a>
+        <a href="#" class="footer-cta">LINEで予約・相談する</a>
       </nav>
       <div class="footer-copy">&copy; 2025 YUTORI esthetic. All rights reserved.</div>
     </div>
   </footer>
-  <a href="#" class="cta-float" id="ctaFloat" aria-label="LINEで相談">LINEで相談</a>
+  <a href="#" class="cta-float" id="ctaFloat" aria-label="LINEで予約・相談する">LINEで予約・相談する</a>
 
   <script>
     (() => {
