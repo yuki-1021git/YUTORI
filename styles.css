@@ -90,9 +90,29 @@
 .section-access {
   background: #f7eee7;
 }
+
+.access-body {
+  display: flex;
+  gap: 32px;
+  align-items: flex-start;
+}
 .access-map-wrap {
-  margin: 0 auto 32px auto;
+  flex: 1 1 55%;
   max-width: 640px;
+}
+.access-text {
+  flex: 1 1 45%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.access-ul-container {
+  text-align: center;
+}
+
+.access-map-wrap {
+  margin: 0;
   border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 2px 16px rgba(178,138,90,0.10);
@@ -104,18 +124,26 @@
   display: block;
 }
 .access-info {
-  text-align: center;
+  text-align: left;
   color: #7a5c3e;
   font-size: 1.08rem;
   letter-spacing: 0.02em;
 }
 @media (max-width: 768px) {
+  .access-body {
+    flex-direction: column;
+  }
   .access-map-wrap {
+    width: 100%;
     max-width: 100%;
-    margin-bottom: 20px;
+    margin: 0 0 20px 0;
+  }
+  .access-text {
+    width: 100%;
   }
   .access-info {
     font-size: 0.98rem;
+    text-align: center;
   }
 }
 /* ========== section-title フェードイン ========== */
@@ -557,6 +585,10 @@ body.is-intro {
   min-width: 240px;
 }
 
+.access-notes-container {
+  text-align: center;
+}
+
 .access-notes {
   margin: 16px 0 0;
   padding-left: 20px;
@@ -708,8 +740,14 @@ a:hover {
   pointer-events: none;
 }
 
-.section-lead {
+.section-lead-main {
   margin: 0 auto;
+  font-size: 19.2px;
+  line-height: 1.8;
+}
+
+.section-lead {
+  margin: 18px 0 24px;
   font-size: 19.2px;
   line-height: 1.8;
 }
