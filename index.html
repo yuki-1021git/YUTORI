@@ -18,7 +18,13 @@
     <div class="container header-inner">
       <div class="header-logo" aria-label="サロン名">YUTORIエステ</div>
 
-      <nav class="header-nav" aria-label="ページ内ナビゲーション">
+      <button class="hamburger" id="hamburger" aria-label="メニューを開く" aria-expanded="false">
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+      </button>
+
+      <nav class="header-nav" id="headerNav" aria-label="ページ内ナビゲーション">
         <a href="#service" class="nav-link">MENU</a>
         <a href="#voice" class="nav-link">お客様の声</a>
         <a href="#access" class="nav-link">アクセス</a>
@@ -351,6 +357,27 @@
           if (cta) cta.classList.add('is-visible');
         }
 
+        // ハンバーガーメニューの開閉
+        const hamburger = document.getElementById('hamburger');
+        const headerNav = document.getElementById('headerNav');
+        if (hamburger && headerNav) {
+          hamburger.addEventListener('click', () => {
+            const isOpen = hamburger.classList.toggle('is-open');
+            headerNav.classList.toggle('is-open');
+            hamburger.setAttribute('aria-expanded', isOpen);
+            hamburger.setAttribute('aria-label', isOpen ? 'メニューを閉じる' : 'メニューを開く');
+          });
+          // メニューリンククリック時にメニューを閉じる
+          headerNav.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+              hamburger.classList.remove('is-open');
+              headerNav.classList.remove('is-open');
+              hamburger.setAttribute('aria-expanded', 'false');
+              hamburger.setAttribute('aria-label', 'メニューを開く');
+            });
+          });
+        }
+
         // section-title フェードイン（スクロール到達時）
         const fadeEls = document.querySelectorAll('.fadein-up');
         if ('IntersectionObserver' in window) {
@@ -366,6 +393,25 @@
         } else {
           // Fallback: 一度に全部表示
           fadeEls.forEach(el => el.classList.add('is-inview'));
+        }
+
+        // cta-float と footer の管理
+        const ctaFloat = document.getElementById('ctaFloat');
+        const footer = document.querySelector('.footer');
+        if (ctaFloat && footer) {
+          const handleScroll = () => {
+            const footerRect = footer.getBoundingClientRect();
+            // footerの上端がビューポート内に入ったら、cta-floatを非表示にする
+            if (footerRect.top <= window.innerHeight) {
+              ctaFloat.style.opacity = '0';
+              ctaFloat.style.pointerEvents = 'none';
+            } else {
+              ctaFloat.style.opacity = '1';
+              ctaFloat.style.pointerEvents = 'auto';
+            }
+          };
+          window.addEventListener('scroll', handleScroll, { passive: true });
+          handleScroll(); // 初期状態を設定
         }
       });
   </script>
